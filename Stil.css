@@ -1,0 +1,874 @@
+@charset "utf-8";
+/* CSS Document */
+* {margin: 0px;
+padding: 0px;
+box-sizing: border-box} /*Bu bölmenin kaynağı = https://www.youtube.com/watch?v=ZeDP-rzOnAA*/
+
+header
+{
+	background: linear-gradient(to right, #393838,#4f4f4f); /*2 Renk arasında soldan sağa doğru geçiş yap*/
+	display: flex; /* Herşeyi yanyana göster */
+	margin: auto; /* Otomatik olarak sınırlandır ortala*/
+	height: 10vh; /* kaynak = https://www.youtube.com/watch?v=ZeDP-rzOnAA*/
+	align-items: center; /* Yüksekliğe göre ortala */
+}
+footer   /*Alta yapıştırma kodunun alındığı yer = https://stackoverflow.com/questions/3525581/how-to-align-footer-div-to-the-bottom-of-the-page*/
+{
+	background: linear-gradient(to right, #393838,#4f4f4f);
+	display: flex;
+	position: fixed; /* position fixed seçildiğinde width değeride verilmelidir*/
+	bottom: 0;
+	width: 100%;
+	margin: auto;
+	height: 10vh;
+	align-items: center;
+}
+orta
+{
+	margin: auto;
+    display: flex;
+	align-items: center;
+	
+	width: 90%;
+	height: 80vh;
+}
+
+
+
+
+/*Slider kaynağı=https://www.youtube.com/watch?v=9Irz0c-6UGw*/
+.slidershow2
+{
+	overflow: hidden;
+	max-width:  70vh;
+	 
+}
+.slides
+{
+	width: 500%;
+	height: 100%;
+	display: flex;
+}
+.slide
+{
+	width: 20%;
+	transition: 0.6s;
+}
+.slide img
+{
+	width: 100%;
+	height: 100%;
+}
+.navigation
+{ 
+    margin-top: 2vh;
+	display: flex;
+	justify-content: space-around;
+}
+.bar
+{
+	
+	width: 60px;
+	height: 10px;
+	border: 2px solid #5C5C5C;
+	margin: 6px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.bar:hover
+{
+	background: #5C5C5C;
+}
+input[name="r"]
+{
+	position: absolute;
+	visibility: hidden;
+}
+#r1:checked ~ .s1
+{
+	margin-left: 0;
+}
+#r2:checked ~ .s2
+{
+	margin-left: -20%;
+}
+#r3:checked ~ .s3
+{
+	margin-left: -40%;
+}
+#r4:checked ~ .s4
+{
+	margin-left: -60%;
+}
+#r5:checked ~ .s5
+{
+	margin-left: -80%;
+}
+/*Slider kısmının bittiği yer ve kaynağı =https://www.youtube.com/watch?v=9Irz0c-6UGw */
+
+
+
+.haberYazi
+{
+	flex: 1;
+	margin-left: 4vh;
+	margin-right: 4vh;
+}
+.haberYazi h1
+{
+	text-align: center;
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #C86111,#f5a261);
+	-webkit-background-clip: text; /*Text ile arka planı yapıştır*/
+	-webkit-text-fill-color:transparent;   /*Arka plan rengiyle text rengini aynı yap*/
+}
+.haberYazi p 
+{
+	text-align: center;
+	margin-top: 5px;
+	font-size: 22px;
+	color: #585772;
+}
+.haberYazi a
+{
+	text-align: center;
+	font-size: 15;
+	text-decoration: none;
+}
+
+.kucukNav{display: none}
+/*Dropdown kodlarının tümün alındığı yer = https://www.youtube.com/watch?v=rgUp302f_lY */
+
+
+
+.kucukNav ul li 
+{
+	position: relative; /*Aşağıda absolute un kullanılabilmesi için burda ralative kullanılmalı*/
+}
+.kucukNav ul li ul 
+{
+	
+	display: none;
+	background-color: #4f4f4f;
+	position: absolute;
+	list-style: none;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	width: 100%;
+	border-radius: 10px;
+	
+}
+.kucukNav ul li:hover ul
+{
+	display: block;
+}
+.kucukNav li ul li ul
+{
+  	border-radius: 10px;
+}
+.kucukNav ul li ul li a:checked img /* Üzerine gelinen fotonun boyutunu değiştir*/
+{
+	max-height: 7vh;
+	max-width: 7vh;
+}
+.kucukNav ul li:hover a img
+{
+	max-height: 8vh;
+	max-width: 8vh;
+}
+
+.nav ul li
+{
+	position: relative; /*Aşağıda absolute un kullanılabilmesi için burda ralative kullanılmalı*/
+}
+.nav ul li ul 
+{
+	
+	display: none;
+	background-color: #4f4f4f;
+	position: absolute;
+	list-style: none;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	width: 100%;
+	border-radius: 10px;
+	
+}
+.nav ul li:hover ul
+{
+	display: block;
+}
+.nav li ul li ul
+{
+  	border-radius: 10px;
+}
+.nav ul li ul li a
+{
+	color: gray;
+	font-size: 30px;
+	padding-top: 10px;
+	text-decoration: none;
+}
+.nav ul li ul li a:hover
+{
+	color: dimgray;
+
+}
+.blenderFoto,.unityFoto,.substanceFoto
+{
+	max-width: 8vh;
+	max-height: 8vh;
+}
+/*Dropdown ın bittiği yer*/
+
+.anaSayfaFoto
+{
+	max-width: 9vh;
+	max-height: 8.5vh;
+}
+.logoFoto,.programlarFoto,.hakkimdaFoto,.iletisimFoto,.projelerimFoto
+{
+	max-width: 9vh;
+	max-height: 9vh;
+}
+.logo,.navLinkleri
+{
+	display: flex;
+}
+.logo
+{
+	flex: 2; /* Sayıya göre kaplayacağı alan belirlenir(orantılı olarak) */
+}
+
+.logoYazi
+{
+	
+	align-self: center; /*Kendini yüksekliğe göre ortala*/
+	padding-left: 1vh;
+	font-size: 30px;
+	color: #777777;
+}
+.nav
+{
+    flex: 3;	
+}
+.navLinkleri, .kucukNavLinkleri
+{
+	display: flex;
+	justify-content: space-around; /* Eşit boşluklara bölerek sırala*/
+	list-style: none; /* Liste elemanlarının noktalarını sil*/
+}
+.navLink
+{
+	color:#777777;
+	font-size: 30px;
+	text-decoration: none; /*Altındaki çizgileri sil*/
+}
+.navLink:hover
+{
+	color: #5c5c5c;
+}
+
+
+
+
+/*İletişim sayfası*/
+/*Email gönderme kaynağı = https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_mail*/
+.iletisimSayfa
+{
+background: linear-gradient(to right, #393838,#4f4f4f);
+	border-radius: 10px;
+	margin: auto;
+}
+.baslik{
+	margin-top: 1vh;
+	
+font-size: 40px;
+color:#777777;
+}
+.iletisim
+{
+margin: auto;
+align-items: center;
+}
+.yazi
+{
+	font-size: 30px;
+	color:#777777;
+}
+.input{
+	width: 30vh;
+	height: 3vh;
+}
+tr
+{
+	height: 5vh;
+}
+th
+{
+	width: 15vh;
+}
+textarea
+{
+	width: 30vh;
+	height: 13vh;
+}
+form
+{
+	margin-right: 1vh;
+}
+.submit
+{
+	padding-right: 1vh;
+	padding-left: 1vh;
+	cursor: pointer;
+	border-radius: 10px;
+	border: 2px solid #777777;
+	background-color: transparent;
+	color: #777777;
+	font-size: 25px;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+.submit:hover
+{
+	border: 2px solid dimgray;
+	color: dimgray;
+}
+/*İletişim Sayfası*/
+
+
+
+/*PDF Sayfası*/
+.pdf{margin: auto}
+
+input[name="duzenle"],input[name="indir"]
+{
+	
+	margin: 1vh;
+	border-radius: 5px;
+	width: 12vh;
+	height: 3.5vh;
+	border: 2px solid #4f4f4f; 
+	background-color: transparent;
+	font-size: 20px;
+	color:#4f4f4f;
+}
+input[name="duzenle"]:hover
+{
+	color: dimgray;
+}
+input[name="indir"]:hover
+{
+	color: dimgray;
+}
+.pdfAnaDiv
+{
+	border: solid #0B0909;
+	width: 500px;
+	height: 630px;
+		margin: auto;
+}
+.kisiFoto
+{
+	flex: 1;
+	
+}
+.pdfFotoBen,.pdfFotoInsert
+{
+	margin-left: 5vh;
+	max-height: 28vh;
+	max-width: 16vh;
+}
+.pdfFotoBen
+{
+	display: block;
+}
+.pdfFotoInsert
+{
+	display: none;
+}
+#pdfAd,#pdfSoyad,#pdfYas,#pdfNumara,#pdfEmail
+{
+	
+	font-size: 20px;
+	margin-top: 1.5vh;
+	margin-bottom: 1.5vh;
+}
+#pdfEhliyet
+{
+	margin-left: 3vh;
+}
+#pdfEhliyet,#pdfMedeniDurum,#pdfDogumYeri,#pdfEgitim,#pdfYazilim,#pdfAdres,#pdfEgitim2,#pdfEgitim3,#pdfEgitim4,#pdfYazilim2,#pdfYazilim3,#pdfAdres2
+{
+	font-size: 20px;
+}
+.satir3,.satir5{margin-top: 5vh;
+	margin-bottom: 5vh;
+	
+}
+.satir1,.satir2
+{	
+	display: flex;
+}
+/*PDF Sayfası*/
+
+
+
+/*Programlar Sayfası*/
+.programFoto
+{
+	flex: 1;
+	max-height: 40vh;
+	max-width: 70vh;
+}
+#blenderProgram,#unityProgram,#substanceProgram
+{
+	max-height: 40vh;
+	max-width: 70vh;
+	border-radius: 10px;
+}
+.programYazi
+{
+	flex: 1;
+}
+#blenderYazi
+{
+	
+	text-align: center;
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #C86111,#f5a261);
+	-webkit-background-clip: text; /*Text ile arka planı yapıştır*/
+	-webkit-text-fill-color:transparent;   /*Arka plan rengiyle text rengini aynı yap*/
+}
+#unityYazi
+{
+	
+	text-align: center;
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #3b74de,#3bc3de);
+	-webkit-background-clip: text; /*Text ile arka planı yapıştır*/
+	-webkit-text-fill-color:transparent;   /*Arka plan rengiyle text rengini aynı yap*/
+}
+#substanceYazi
+{
+	
+	text-align: center;
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #81290f,#ff754c);
+	-webkit-background-clip: text; /*Text ile arka planı yapıştır*/
+	-webkit-text-fill-color:transparent;   /*Arka plan rengiyle text rengini aynı yap*/
+}
+#blenderYaziP,#unityYaziP,#substanceYaziP
+{
+	 margin-left: 3vh;
+	margin-right: 3vH;
+	text-align: center;
+	margin-top: 5px;
+	font-size: 22px;
+	color: #585772;
+}
+/*Programlar Sayfası*/
+
+
+
+/*Proje Sayfası*/
+.proje
+{
+	flex: 1;
+	max-height: 40vh;
+	max-width: 70vh;
+}
+.projeVideo
+{
+	max-width: 70vh;
+	max-height: 40vH;
+	border-radius: 10px;
+	
+}
+.projeYaziContainer
+{
+	flex:  1;
+}
+.projeYazi
+{
+	text-align: center;
+	font-size: 44px;
+	font-weight: 500;
+	background: linear-gradient(to right, #3b74de,#3bc3de);
+	-webkit-background-clip: text; /*Text ile arka planı yapıştır*/
+	-webkit-text-fill-color:transparent;   /*Arka plan rengiyle text rengini aynı yap*/
+}
+.projeYaziP
+{
+	margin-left: 3vh;
+	margin-right: 3vH;
+	text-align: center;
+	margin-top: 5px;
+	font-size: 22px;
+	color: #585772;
+}
+/*Proje Sayfası*/
+
+
+
+@media screen and (max-width: 1800px) /*1215 pixel altında uygulanacak değişiklikler*/
+{
+	.nav
+	{
+		flex: 5; /* Nav barın kapladığı alanı arttır*/
+	}
+}
+@media screen and (max-width: 1610px)
+{
+	.nav
+	{
+		flex: 7;
+	}
+}
+@media screen and (max-width: 1450px)
+{
+	.nav
+	{
+		flex: 14;
+	}
+	.logoYazi   /* Ana logonun yanındaki yazı yer açmak için iptal edilir */
+	{
+		display: none;
+	}
+}
+@media screen and (max-width: 1100px) /* Ana menüdeki yazı olan linkler temsiliği simgelerle değiştirilir */
+{
+	.nav{display: none;} /*Yazıların olduğu nav ı iptal eder*/
+	.kucukNav{display: flex;}/* İkonların olduğu nav ı gösterir*/
+	orta 
+	{
+		flex-direction: column-reverse; /*aşağı doğru ters sırala*/
+	}
+	.haberYazi,.projeYazi
+	{
+		margin-top: 10vh;
+	}
+	.slidershow,.proje
+	{
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+	}
+	
+}
+
+@media screen and (max-width: 1100px) and (min-height: 1100px) /* Ekran çözünürlüğünü yüksek gören telefonlar için "and" iki koşulunda saylanmasını zorunlu kılar*/
+{
+	.iletisimSayfa
+	{
+		margin-bottom: 25vh;
+	}
+	.proje{
+		margin-bottom: 15vh;
+	}
+	.programFoto
+	{
+		margin-top: 2vh;
+		margin-bottom: 15vh;
+	}
+	#blenderProgram,#unityProgram,#substanceProgram
+	{
+		width: 900px;
+	}
+		input[name="duzenle"],input[name="indir"]
+{
+	
+	height: 5vh;
+}
+	#blenderYazi,#unityYazi,#substanceYazi
+	{
+		margin-top: 10vh;
+	}
+	
+	.slidershow
+	{
+		margin-left: 3vh;
+		margin-right: 3vh;
+		margin-bottom: 25vh;
+	}
+	.projeVideo
+	{
+		width: 900px;
+	}
+	.kisiFoto
+	{
+		display: none;
+	}
+	.pdf
+	{
+		margin-bottom: 20vh;
+	}
+	.satir3,.satir5{
+		margin-top: 1vh;
+	margin-bottom: 1vh;
+	
+     }
+}
+
+@media screen and (max-height: 700px)
+{
+	.programFoto
+	{
+		margin-top: 2vh;
+		margin-bottom: 10vh;
+	}
+	#blenderProgram,#unityProgram,#substanceProgram
+	{
+		width: 350px;
+	}
+	input[name="duzenle"],input[name="indir"]
+{
+	
+	height: 5vh;
+}
+	.kisiFoto
+	{
+		display: none;
+	}
+	.butonSatir
+	{
+		margin-bottom: 10vh;
+	}
+	.pdfAnaDiv
+	{
+		width: 350px;
+		margin-top: 5vh;
+	}
+	.logoFoto,.programlarFoto,.hakkimdaFoto,.iletisimFoto,.projelerimFoto
+{
+	max-width: 7.8vh;
+	max-height: 7.8vh;
+}
+	.anaSayfaFoto
+	{
+		max-height: 7.5vh;
+		max-width: 7.8vh;
+	}
+	.kucukNav ul li:hover a img
+{
+	max-height: 7vh;
+	max-width: 7vh;
+}
+	.kucukNav ul li ul li a:hover img /* Üzerine gelinen fotonun boyutunu değiştir*/
+{
+	max-height: 6vh;
+	max-width: 6vh;
+}
+	.projeVideo 
+	{
+		width: 350px;
+	}
+	.footerDiv
+	{
+		position: absolute;
+		left: 10px;
+	}
+	orta
+	{
+		width: 100%;
+		height: 150%;
+	}
+	.haberYazi,.projeYazi,.pdfAnaDiv, #blenderYazi,#unityYazi,#substanceYazi
+	{
+		margin-top: 5vh;
+	}
+	.slidershow,.projeVideo
+	{
+		width: 350px;
+		margin-bottom: 10vh;
+	}
+	
+}
+
+@media screen and (max-width: 500px)
+{ 
+	.programFoto
+	{
+		margin-top: 2vh;
+		margin-bottom: 10vh;
+	}
+	#blenderProgram,#unityProgram,#substanceProgram
+	{
+		width: 350px;
+	}
+	input[name="duzenle"],input[name="indir"]
+{
+	
+	height: 5vh;
+}
+	.kisiFoto
+	{
+		display: none;
+	}
+	.butonSatir
+	{
+		margin-bottom: 10vh;
+	}
+	.pdfAnaDiv
+	{
+		width: 350px;
+		margin-top: 5vh;
+	}
+	.logoFoto,.programlarFoto,.hakkimdaFoto,.iletisimFoto,.projelerimFoto
+{
+	max-width: 7.8vh;
+	max-height: 7.8vh;
+}
+	.anaSayfaFoto
+	{
+		max-height: 7.5vh;
+		max-width: 7.8vh;
+	}
+	.kucukNav ul li:hover a img
+{
+	max-height: 7vh;
+	max-width: 7vh;
+}
+	.kucukNav ul li ul li a:hover img /* Üzerine gelinen fotonun boyutunu değiştir*/
+{
+	max-height: 6vh;
+	max-width: 6vh;
+}
+	.projeVideo 
+	{
+		width: 350px;
+	}
+	.footerDiv
+	{
+		position: absolute;
+		left: 10px;
+	}
+	orta
+	{
+		width: 100%;
+		height: 150%;
+	}
+	.haberYazi,.projeYazi,.pdfAnaDiv, #blenderYazi,#unityYazi,#substanceYazi
+	{
+		margin-top: 5vh;
+	}
+	.slidershow,.projeVideo
+	{
+		width: 350px;
+		margin-bottom: 10vh;
+	}
+	
+}
+
+@media screen and (max-width: 370px)
+{
+	
+	.kucukNav ul li:hover a img
+{
+	max-height: 6vh;
+	max-width: 6vh;
+}
+		.kucukNav ul li ul li a img /* Üzerine gelinen fotonun boyutunu değiştir*/
+{
+	max-height: 5vh;
+	max-width: 5vh;
+}
+	.haberYazi,.projeYazi
+	{
+		margin-top: 5vh;
+	}
+	.slidershow,.projeVideo
+	{
+		width: 350px;
+		margin-bottom: 10vh;
+	}
+	orta
+	{
+		height: 150%;
+	}
+	.footerDiv{position:absolute;
+	left: 10px;}
+}
+
+@media screen and (max-height:790px ) and (max-width: 500px) /* and 2 şartında sağlanması koşulu*/
+{
+
+	
+	.kucukNav ul li:hover a img
+{
+	max-height: 6vh;
+	max-width: 6vh;
+}
+		.kucukNav ul li ul li a img /* Üzerine gelinen fotonun boyutunu değiştir*/
+{
+	max-height: 5vh;
+	max-width: 5vh;
+}
+	.haberYazi,.projeYazi
+	{
+		margin-top: 5vh;
+	}
+	.slidershow,.projeVideo
+	{
+		width: 350px;
+		margin-bottom: 10vh;
+	}
+	orta
+	{
+		height: 150%;
+	}
+	.footerDiv{position:absolute;
+	left: 10px;}
+	.iletisimSayfa
+	{
+		margin-top: 10vh;
+	}
+}
+
+/*<footer> ın kodları aşağıdaki kısımdır*/
+.footerDiv
+{
+	margin:  auto;
+}
+.footerDiv a
+{	
+	font-size: 30px;
+	color: #777777;
+	text-decoration: none;
+}
+.footerDiv a:hover
+{
+	color: dimgray;
+}
+.google
+{
+	max-width: 9vh;
+	max-height: 9vh;
+}
+.google:hover
+{
+	max-height: 8.5vh;
+	max-width: 8.5vH;
+}
+.instagram
+{
+    max-width: 9vh;
+	max-height: 9vh;
+}
+.instagram:hover
+{
+	max-height: 8.5vh;
+	max-width: 8.5vH;
+	
+}
+.footerLogoar
+{
+	position: absolute;
+	right: 1vh;
+	display: flex;
+}
